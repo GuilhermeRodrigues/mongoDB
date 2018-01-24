@@ -1,0 +1,25 @@
+ANOTAÇÕES IMPORTANTES
+======================
+
+
+
+
+
+
+
+MongoDB
+=====================================================
+Acessar pasta MongoDB -> cd "Program Files"\MongoDB\Server\3.6\bin
+Executar client MongoDB pelo cmd -> mongod.exe
+Executar SGBD MongoDB pelo cmd -> mongo.exe
+
+
+COMANDOS
+=====================================================
+Mostrar bancos de dados -> show dbs
+
+Selecionar banco/criar banco (se não houver) -> use nome_do_banco
+
+Criar coleção banco -> db.alunos.save({Nome: "Jorge"})
+
+Apagar banco -> db.dropDatabase();
