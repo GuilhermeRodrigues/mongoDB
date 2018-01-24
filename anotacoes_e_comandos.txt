@@ -20,6 +20,12 @@ Mostrar bancos de dados -> show dbs
 
 Selecionar banco/criar banco (se não houver) -> use nome_do_banco
 
-Criar coleção banco -> db.alunos.save({Nome: "Jorge"})
+Criar estrutura banco -> db.alunos.save({Nome: "Jorge"})
 
 Apagar banco -> db.dropDatabase();
+
+Criar Collection -> db.createCollection("alunos")
+
+Listar relação de collections -> db.getCollectionNames()
+
+Apagar collection -> db.cursos.drop() (cursos é o nome da collection)
