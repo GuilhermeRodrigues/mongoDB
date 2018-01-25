@@ -29,3 +29,13 @@ Criar Collection -> db.createCollection("alunos")
 Listar relação de collections -> db.getCollectionNames()
 
 Apagar collection -> db.cursos.drop() (cursos é o nome da collection)
+
+
+Inserir documentos nas collections -> db.alunos.save({nome: 'José', idade: 30, sexo: 'M', cpf: '123.123.123-12', rg: '123.123-7', matricula: 'abc123'})
+
+db.alunos.save({nome: 'Fernanda', idade: 32, sexo: 'F', matricula: 'bkj456', 
+cursos_interesse: [
+{curso: 'Curso Completo do Desenvolvedor NodeJS'},
+{curso: 'Curso Completo de Desenvolvimento Web'}
+]
+})
