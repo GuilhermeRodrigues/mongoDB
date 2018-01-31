@@ -39,3 +39,64 @@ cursos_interesse: [
 {curso: 'Curso Completo de Desenvolvimento Web'}
 ]
 })
+
+Listar o ultimo documento da collection -> db.alunos.findOne()
+
+Listar todos os documentos da collection -> db.alunos.find()
+
+Listar todos os documentos da collection de forma organizada  -> db.alunos.find().pretty()
+
+
+Selecionar documento da collection com condição  -> db.alunos.find({nome:{$eq:'José'}}).pretty()
+
+
+Selecionar documento da collection com condição e AND (,)  -> db.alunos.find(
+									  {  
+									     sexo:{$eq:'F'},
+									     idade:{$gt:30}
+									  }
+									).pretty()
+
+
+Selecionar documento da collection com condição e OR ($or)  -> db.alunos.find(
+									  {  
+									     $or:[
+									           {nome:{$eq:'Maria'}},
+									           {nome:{$eq:'José'}}
+									     ]
+									  }
+									).pretty()
+
+Atualizar documento da collection -> db.alunos.update(
+						         {  
+							   sexo: 'F'
+							 },
+							 {
+							   $set:{sexo: 'Feminino'}
+							 },
+							 {
+							   multi:false
+							 }
+						       )
+OBS: SE NÃO PASSAR O MULTI, O PADRÃO É FALSE (SE TRUE ATUALIZA TODOS OS REGISTROS, SE FALSE, APENAS O 1º)
+
+
+
+Remover documento da collection -> db.alunos.remove(
+						     {  
+						       nome: 'Maria'
+						     }
+						   )
+
+db.alunos.remove(
+						     {  
+						       idade:{$gt:30}
+						     }
+						   )
+
+
+db.alunos.remove(
+						     {  
+						       matricula:{$eq:'abc123'}
+						     }
+						   )
