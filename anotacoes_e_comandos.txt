@@ -1,9 +1,15 @@
 ANOTAÇÕES IMPORTANTES
 ======================
 
+Mapear varíável de ambiente -> C:\Program Files\MongoDB\Server\3.6\bin
+Após mapear basta digitar os comandos de qualquer local: 
 
+mongod
 
+mongo
 
+---------
+Interface gráfica mongo -> mongod --rest
 
 
 
